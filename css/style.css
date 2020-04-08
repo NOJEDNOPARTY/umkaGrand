@@ -146,6 +146,18 @@
 
 header {padding: 21px 15px 0 39px ;}
 
+	header.fixed {
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 5;
+		width: 100%;
+		padding: 10px 15px 10px 39px;
+		background: #fff;
+		box-shadow: 0 0 15px 3px #9c9c9c;
+	
+	}
+
 	header .wrapper {
 		display: flex;
 		align-items: center;
@@ -156,6 +168,8 @@ header {padding: 21px 15px 0 39px ;}
 		width: 100%;
 		max-width: 121px;
 	}
+
+	header.fixed .logo  {max-width: 70px;}
 
 	header .logo img {width: 100%;}
 
@@ -1119,6 +1133,18 @@ header {padding: 21px 15px 0 39px ;}
 		background: rgba(0, 0, 0, 0.4);
 	}
 
+	#benefitsPopup .popup-layout {
+		align-items: flex-start;
+		padding: 40px;
+		overflow-y: scroll;
+	}
+
+	#benefitsPopup .popup-layout::-webkit-scrollbar {width: 0px;}
+ 
+	#benefitsPopup .popup-layout::-webkit-scrollbar-track {box-shadow: inset 0 0 0px #ffffff;}
+
+	#benefitsPopup .popup-layout::-webkit-scrollbar-thumb {background-color: transparent;}
+
 	.popup {
 		position: relative;
 		width: 100%;
@@ -1208,6 +1234,8 @@ header {padding: 21px 15px 0 39px ;}
 		transition: 0.3s ease;
 	}
 
+	.form-field.error {border: 1px solid #e5194a;}
+
 	textarea.form-field {
 		height: 129px;
 		padding: 20px;
@@ -1248,3 +1276,135 @@ header {padding: 21px 15px 0 39px ;}
 	}
 
 	.popup-close img {width: 100%;}
+
+
+@media(max-width: 1800px) {
+	.banner {padding: 208px 0 390px 330px;}
+	.banner-img {max-width: 700px;}
+	.about {padding: 170px 0 124px;}
+	.reviews-img {
+		top: -30px;
+		max-width: 570px;
+	}
+	.contact {background-position: right -80px bottom -25px, left 36px top 190px;}
+	.gallery-item {max-height: 310px;}
+}
+
+@media(max-width: 1600px) {
+	.about .wrapper {padding:  0 20px;}
+}
+@media(max-width: 1500px) {
+	.gallery-item {max-height: 260px;}
+	.contact {background-position: right -220px bottom -25px, left 36px top 190px;}
+	.banner {padding: 140px 0 369px 200px;}
+	.about {background-position: right 479px top 84px, right -90px bottom 131px;}
+	.format {background-position: left -100px top 65px, 
+		left -41px top 650px,
+		right 49px top 143px,
+		right 7px top 639px,
+		left 287px bottom 526px;}
+	.about-img {max-width: 600px;}
+	.benefits {background: none;}
+	.bnf-title {
+		font-size: 24px;
+		line-height: 24px;
+	}
+	.reviews-img {max-width: 510px;}
+}
+@media(max-width: 1500px) {
+	.gallery-section .title {text-align: left;}
+	.reviews-cnt {max-width: 700px;}
+	.reviews-img {top: 30px;}
+	.features-list-wrap {padding-right: 0;}
+}
+@media(max-width: 1354px) {
+	.bnf-title {
+		font-size: 18px;
+		line-height: 18px;
+	}
+	.bnf-cnt p {
+		font-size: 14px;
+		line-height: 19px;
+	}
+	.gallery-item {max-height: 220px;}
+	.contact {background-position: right -290px bottom -25px, left 36px top 190px;}
+	.banner {
+		padding: 104px 0 290px 69px;
+		background-position: bottom left -245px;
+	}
+}
+
+@media(max-width: 1300px) {
+	.price {padding: 45px 0;}
+	header {padding: 21px 15px 0 0;}
+	header.fixed {padding: 10px 15px 10px 0;}
+	header nav {padding: 0 10px;}
+	header nav a {
+		font-size: 16px;
+		line-height: 16px;
+	}
+	header nav a:not(:last-child) {margin-right: 10px;}
+	.format {
+		background-position: left -100px top 65px, left -147px top 650px, right 49px top 143px, right 7px top 639px, left 287px bottom 526px;
+	}
+	.price {background-position: right 199px top 36px, left -58px bottom 145px;}
+	
+}
+
+@media(max-width: 1214px){
+	.teachers-list.hidden .teacher:nth-child(n+9) {display: none;}
+}
+@media(max-width: 1200px){
+	.teachers .title {
+		padding-right: 0;
+		text-align: center;
+	}
+	.gallery-item {max-height: 180px;}
+	.contact {background-position: right -370px bottom -25px, left 36px top 190px;}
+	.features-list-item {max-width: 50%;}
+	.features-list-item-last {max-width: 100%;}
+	.format-item {max-width: 330px;}
+	.format-item-img {
+		max-width: 125px;
+		min-width: 125px;
+		height: 125px;
+	}
+	.about-img {max-width: 400px;}
+	.banner-img {
+		max-width: 400px;
+		top: 39px;
+	}
+	.banner {
+		padding: 80px 0 120px 69px;
+		background-position: bottom left -190px;
+	}
+}
+
+@media(max-width: 1100px) {
+	.reviews-img {display: none;}
+	.reviews-cnt,
+	.rev {max-width: 100%;}
+	.format-item {max-width: 315px;}
+	.format-item-title {
+		padding-top: 59px;
+		font-size: 16px;
+		line-height: 20px;
+	}
+	header .logo {max-width: 80px;}
+}
+
+@media(max-width: 992px)  {
+	.price-item p {
+		font-size: 14px;
+		line-height: 21px;
+	}
+	.title {
+		font-size: 46px;
+		line-height: 46px;
+	}
+	.subtitle {
+		font-size: 25px;
+		line-height: 25px;
+	}
+	.banner {padding: 80px 0 120px 27px;}
+}

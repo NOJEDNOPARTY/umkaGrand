@@ -115,8 +115,8 @@ body.hidden {overflow: hidden;}
 }
 
 .btn-gradient span:not(.btn-gradient-layout) {
-    display: flex;
-    align-items: center;
+    display: block;
+	padding-top: 17px;
     font-family: 'Gilroy-Medium';
     font-size: 16px;
     line-height: 12px;
@@ -1776,15 +1776,18 @@ header {padding: 21px 15px 0 39px ;}
 }
 @media(max-width: 730px) {
 	.bnf {
+		align-items: center;
 		max-width: 100%;
 		padding-right: 0;
 	}
+	.bnf-cnt {padding-top: 0;}
+	.benefits-list {align-items: center;}
 	.benefits-list.hidden .bnf:nth-child(n+4) {display: none;}
 	.benefits .btn-gradient {margin: 0 auto;}
 	.price-item {
 		margin-right: 0;
 		width: 100%;
-		max-width: 1160px;
+		max-width: 160px;
 		padding-right: 5px;
 	}
 	.price-list {justify-content: space-around;}
@@ -1848,7 +1851,7 @@ header {padding: 21px 15px 0 39px ;}
 	.shares-timer > div {max-width: 100%;}
 
 	.shares-timer > div {min-width: 0 !important;}
-	 
+	.copyright {flex-direction: column;}
 }
 @media(max-width: 359px) {
 	.format-item-title {

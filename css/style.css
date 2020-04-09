@@ -7,6 +7,8 @@
 
 /* main styles */
 
+body.hidden {overflow: hidden;}
+
 .wrapper {
 	width: 100%;
 	max-width: 1920px;
@@ -216,6 +218,7 @@ header {padding: 21px 15px 0 39px ;}
 	.lang-trigger-active {
 		font-family: 'Gilroy-Black';
 		color: #afcb1f;
+		border-bottom: 2px solid #afcb1f;
 	}
 
 	.lang-trigger-slash {margin: 0 4px;}
@@ -243,14 +246,26 @@ header {padding: 21px 15px 0 39px ;}
 
 	.banner-img {
 		position: absolute;
-    right: 0;
-    top: -37px;
-    width: 100%;
-    max-width: 906px;
+		right: 0;
+		top: -37px;
+		width: 100%;
+		max-width: 906px;
+	}
+
+	.banner-bumbles {
+		position: absolute;
+		right: 26px;
+		top: 26px;
 	}
 
 	.banner-img img {width: 100%;}
 
+	.arrow-bottom {
+		position: absolute;
+		bottom: 72px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
 
 /* about styles */
 
@@ -362,15 +377,21 @@ header {padding: 21px 15px 0 39px ;}
 		flex-flow: row wrap;
 	}
 
+	.benefits .btn-gradient {display: none;}
+
+	@media(max-width: 767px) {.benefits .btn-gradient {display: flex;}}
+
 	.bnf {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start;
     width: 100%;
     max-width: 33%;
     padding-right: 3px;
     margin-bottom: 20px;
 	}
+
+	.bnf-cnt {padding-top: 35px;}
 
 	.bnf-img {
 		display: flex;
@@ -477,7 +498,7 @@ header {padding: 21px 15px 0 39px ;}
 		top: -39px;
 		left: 0;
 		display: flex;
-		align-items: center;
+		align-items: flex-start;
 		justify-content: flex-start;
 	}
 
@@ -993,7 +1014,7 @@ header {padding: 21px 15px 0 39px ;}
 		position: relative;
 		width: 100%;
 		max-width: 25%;
-		max-height: 358px;
+		max-height: 338px;
 		overflow: hidden;
 	}
 
@@ -1110,17 +1131,15 @@ header {padding: 21px 15px 0 39px ;}
 	width: 100%;
 	height: 100vh;
 	padding: 15px;
-	opacity: 0;
-	z-index: -5;
-	display: flex;
+	z-index: 10;
+	display: none;
 	align-items: center;
 	justify-content: center;
-	transition: 0.5s ease;
+	transition: 0.3s ease;
 }
 
 	.popup-wrapper.active {
-		opacity: 1;
-		z-index: 5;
+		display: flex;
 	}
 
 	.popup-layout {
@@ -1138,7 +1157,7 @@ header {padding: 21px 15px 0 39px ;}
 
 	#benefitsPopup .popup-layout {
 		align-items: flex-start;
-		padding: 40px;
+		padding: 20px 0;
 		overflow-y: scroll;
 	}
 
@@ -1280,7 +1299,7 @@ header {padding: 21px 15px 0 39px ;}
 	}
 
 	.popup-close img {width: 100%;}
-
+.menu-wrap  {width: 100%;}
 .menu-wrap .menu-top {display: none;}
 
 .menu-trigger {
@@ -1307,14 +1326,14 @@ header {padding: 21px 15px 0 39px ;}
 		max-width: 570px;
 	}
 	.contact {background-position: right -80px bottom -25px, left 36px top 190px;}
-	.gallery-item {max-height: 310px;}
+	.gallery-item {max-height: 275px;}
 }
 
 @media(max-width: 1600px) {
 	.about .wrapper {padding:  0 20px;}
 }
 @media(max-width: 1500px) {
-	.gallery-item {max-height: 260px;}
+	.gallery-item {max-height: 250px;}
 	.contact {background-position: right -220px bottom -25px, left 36px top 190px;}
 	.banner {padding: 140px 0 369px 200px;}
 	.about {background-position: right 479px top 84px, right -90px bottom 131px;}
@@ -1345,6 +1364,7 @@ header {padding: 21px 15px 0 39px ;}
 		font-size: 18px;
 		line-height: 18px;
 	}
+	.arrow-bottom {margin-left: -100px;}
 	.bnf-cnt p {
 		font-size: 14px;
 		line-height: 19px;
@@ -1378,6 +1398,10 @@ header {padding: 21px 15px 0 39px ;}
 	.teachers-list.hidden .teacher:nth-child(n+9) {display: none;}
 }
 @media(max-width: 1200px){
+	.arrow-bottom {
+		margin-left: 0;
+		bottom: -32px;
+	}
 	.teachers .title {
 		padding-right: 0;
 		text-align: center;
@@ -1470,6 +1494,8 @@ header {padding: 21px 15px 0 39px ;}
 }
 
 @media(max-width: 992px)  {
+	.arrow-bottom,
+	.banner-bumbles {display: none;}
 	.price-item p {
 		font-size: 14px;
 		line-height: 21px;
@@ -1606,12 +1632,12 @@ header {padding: 21px 15px 0 39px ;}
 		height: 143px;
 	}
 	.format-item-title {
-		padding-top: 74px;
+		padding-top: 59px;
 		font-size: 18px;
 		line-height: 20px;
 	}
 	.format-item {
-		margin-bottom: 70px;
+		margin-bottom: 77px;
 		padding: 118px 9px 45px 18px;
 	}
 	.price {background: none;}
@@ -1740,6 +1766,7 @@ header {padding: 21px 15px 0 39px ;}
 	.contact-column p:not(:last-child) {
 		margin-bottom: 10px;
 	}
+	header.fixed .logo{max-width: 45px;}
 }
 
 @media(max-width: 744px) {
@@ -1757,9 +1784,10 @@ header {padding: 21px 15px 0 39px ;}
 	.price-item {
 		margin-right: 0;
 		width: 100%;
-		max-width: 140px;
+		max-width: 1160px;
 		padding-right: 5px;
 	}
+	.price-list {justify-content: space-around;}
 	.about-cnt-text {    height: 290px;}
 	.benefits .title {text-align: left;}
 	.price .title {
@@ -1832,6 +1860,7 @@ header {padding: 21px 15px 0 39px ;}
 		max-width: 185px;
 		top: 0px;
 	}
+	.price-item {max-width: 135px;}
 }
 @media(max-height: 400px) {
 	.popup-layout {

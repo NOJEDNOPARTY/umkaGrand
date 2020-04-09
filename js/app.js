@@ -8,11 +8,13 @@ var common = {
 		$('.menu-trigger').click(function(event){
 			event.preventDefault();
 			$('header').addClass('open');
+			$('body').addClass('hidden');
 			var bLazy = new Blazy({});
 		})
 		$('.menu-close-trigger').click(function(event){
 			event.preventDefault();
 			$('header').removeClass('open');
+			$('body').removeClass('hidden');
 		})
 		
 		var bLazy = new Blazy({});
@@ -24,6 +26,7 @@ var common = {
 			event.preventDefault();
 			var popup  = '#' + $(this).attr('data-popup');
 			$('.popup-wrapper').removeClass('active');
+			$('body').addClass('hidden');
 			$(popup).addClass('active');
 		});
 		$('.anchor').click(function(event){
@@ -36,6 +39,7 @@ var common = {
 
 		$('.bnf-trigger').click(function(event){
 			event.preventDefault();
+			$('body').addClass('hidden');
 			$('.popup .popup-info-wrapper').find('.popup-info').remove();
 			$(this).closest('.bnf-cnt').find('.popup-info').clone().appendTo( '.popup .popup-info-wrapper');
 			$('#benefitsPopup').addClass('active');
@@ -44,6 +48,7 @@ var common = {
 		$('.popup-close').click(function(event){
 			event.preventDefault();
 			$('.popup-wrapper').removeClass('active');
+			$('body').removeClass('hidden');
 		});
 
 		

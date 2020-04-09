@@ -5,14 +5,15 @@ var common = {
 	},
 	main: function(){
 
-		// $('.menu-trigger').click(function(event){
-		// 	event.preventDefault();
-		// 	$('nav').addClass('open');
-		// })
-		// $('.nav-close').click(function(event){
-		// 	event.preventDefault();
-		// 	$('nav').removeClass('open');
-		// })
+		$('.menu-trigger').click(function(event){
+			event.preventDefault();
+			$('header').addClass('open');
+			var bLazy = new Blazy({});
+		})
+		$('.menu-close-trigger').click(function(event){
+			event.preventDefault();
+			$('header').removeClass('open');
+		})
 		
 		var bLazy = new Blazy({});
 
@@ -80,6 +81,8 @@ var common = {
 					$(this).removeClass('hidden').find('.more-trigger-cnt').text(dataOpen);
 				}
 				$(this).closest('.more-cnt-wrap').find('.more-cnt').removeClass('hidden');
+				
+				var bLazy = new Blazy({});
 			}else {
 				if($(this).find('.more-trigger-cnt').html() == dataOpen){
 					$(this).addClass('hidden').find('.more-trigger-cnt').text(dataHidden);
@@ -93,21 +96,12 @@ var common = {
 
 		function fixedHead(headerH) {
 			var header = headerH;
-			if($(window).width() < 768) {
+			if($(window).scrollTop() > header) {
+				$('header').addClass('fixed');
+				$('body').css({'margin-top':header})
+			}else {
 				$('header').removeClass('fixed');
 				$('body').css({'margin-top': 0})
-				$('.header-mob').addClass('fixed');
-				$('body').css({'margin-top':$('.header-mob').height()})
-			}else {
-				if($(window).scrollTop() > header) {
-					$('.header-mob').removeClass('fixed');
-					$('body').css({'margin-top': 0})
-					$('header').addClass('fixed');
-					$('body').css({'margin-top':header})
-				}else {
-					$('header').removeClass('fixed');
-					$('body').css({'margin-top': 0})
-				}
 			}
 		};
 		fixedHead(headerH);
@@ -116,6 +110,7 @@ var common = {
 		$(window).resize(function() {
 			var headerH = $('header').outerHeight();
 			fixedHead(headerH);
+			var bLazy = new Blazy({});
 		});
 		$(window).scroll(function() {
 			fixedHead(headerH);

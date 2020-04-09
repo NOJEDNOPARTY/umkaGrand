@@ -278,6 +278,8 @@ header {padding: 21px 15px 0 39px ;}
 
 	.about .title {margin-bottom: 46px;}
 
+	.about .title-mob {display: none;}
+
 	.about-cnt-text {
 		width: 100%;
     max-width: 614px;
@@ -335,6 +337,7 @@ header {padding: 21px 15px 0 39px ;}
 	}
 
 	.about-list li:not(:last-child) {margin-bottom: 3px;}
+	.about-img-mob {display: none;}
 
 
 /* benefits styling */
@@ -1157,6 +1160,7 @@ header {padding: 21px 15px 0 39px ;}
 	.popup-m {
 		max-width: 502px;
 		padding: 56px 40px;
+		margin: 0 15px;
 	}
 
 	#thanksPopup .popup  {padding: 160px 40px 88px;}
@@ -1277,6 +1281,22 @@ header {padding: 21px 15px 0 39px ;}
 
 	.popup-close img {width: 100%;}
 
+.menu-wrap .menu-top {display: none;}
+
+.menu-trigger {
+    display: none;
+    width: 39px;
+    height: 39px;
+    border-radius: 50%;
+}
+
+
+.menu-trigger img {width: 100%;}
+
+
+
+
+
 
 @media(max-width: 1800px) {
 	.banner {padding: 208px 0 390px 330px;}
@@ -1312,7 +1332,10 @@ header {padding: 21px 15px 0 39px ;}
 	.reviews-img {max-width: 510px;}
 }
 @media(max-width: 1500px) {
-	.gallery-section .title {text-align: left;}
+	.gallery-section .title {
+		text-align: left;
+		padding: 0 20px;
+	}
 	.reviews-cnt {max-width: 700px;}
 	.reviews-img {top: 30px;}
 	.features-list-wrap {padding-right: 0;}
@@ -1393,6 +1416,59 @@ header {padding: 21px 15px 0 39px ;}
 	header .logo {max-width: 80px;}
 }
 
+
+@media(max-width: 1024px)  {
+	.lang-trigger:not(.lang-trigger-mob) {display: none;}
+	.menu-trigger,
+	.menu-wrap .menu-top {display: flex;}
+	header.fixed,
+	header {padding: 18px 0 10px 0;}
+	
+	.menu-wrap .menu-top {
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		padding-bottom: 41px;
+	}
+	.menu-wrap {
+		position: fixed;
+		top: 0;
+		right: 0;
+		z-index: 10;
+		width: calc(100% - 15px);
+		display: none;
+		align-items: flex-start;
+		justify-content: space-between;
+		flex-direction: column;
+		padding:18px 20px 40px 0;
+		background-color: #fff;
+	}
+
+	header.open .menu-wrap{display: flex;}
+	.menu-close-trigger {
+		width: 100%;
+		max-width: 19px;
+	}
+
+	.menu-close-trigger  img {width: 100%;}
+	.menu-wrap nav {
+		padding: 0 20px 0 50px;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.menu-wrap nav a{
+		font-size: 18px;
+		line-height: 18px;
+	}
+	.menu-wrap nav a:not(:last-child) {
+		margin-bottom: 28px;
+		margin-right: 0;
+	}
+	header.fixed .logo,
+	header .logo {max-width: 87px;}
+}
+
 @media(max-width: 992px)  {
 	.price-item p {
 		font-size: 14px;
@@ -1406,5 +1482,367 @@ header {padding: 21px 15px 0 39px ;}
 		font-size: 25px;
 		line-height: 25px;
 	}
-	.banner {padding: 80px 0 120px 27px;}
+	.banner {
+		padding: 80px 0 51px 27px;
+		background-position: bottom -73px left -315px;
+	}
+	.format-item {max-width: 366px;}
+	.format-list {justify-content: space-around;}
+	.format .title {
+		padding-right: 0;
+		text-align: center;
+	}
+	.benefits .title {
+		padding-left: 0;
+		text-align: center;
+	}
+	.bnf {max-width: 400px;}
+	.benefits-list {justify-content: space-around;}
+	.features-list-item {
+		max-width: 100%;
+		padding-left: 0;
+	}
+	.lesson-number {left: 0;}
+	.teachers {
+		padding: 0 0 40px;
+		background: none;
+	}
+	.gallery-item {
+		max-height: 240px;
+		max-width: calc(100% / 3);
+	}
+	.gallery {justify-content: space-around;}
+	.about .wrapper {flex-direction: column;}
+	.about-img {
+		max-width: 600px;
+		margin-right: 0;
+		margin-left: -20px;
+	}
+	.about-cnt-text {max-width: 100%;}
+	.about {padding: 130px 0 40px;}
+	.format {background: none;}
+	.format .title {padding-bottom: 80px;}
+	.shares-row{flex-direction: column;}
+	.shares-slider {
+		max-width: 100%;
+		margin-bottom: 32px;
+	}
+	.shares-timer p {text-align: left;}
+	.banner-img {
+		max-width: 350px;
+		top: 39px;
+	}
+	.price-list {
+		flex-flow: row wrap;
+		justify-content: flex-start;
+	}
+	.price-item {margin-right: 30px;}
+	.gallery.hidden .gallery-item:nth-child(n+7) {
+		display: none;
+	}
+}
+@media(max-width: 979px){
+	.teachers-list.hidden .teacher:nth-child(n+7) {display: none;}
+}
+
+@media(max-width: 800px) {
+	.bnf {max-width: 50%;}
+}
+
+@media(max-width: 767px) {
+	header .wrapper {
+		padding: 0 20px 0 15px;
+	}
+	.title {
+		font-size: 32px;
+		line-height: 34px;
+	}
+	.banner .title {
+		margin-bottom: 2px;
+	}
+	.banner-cnt .subtitle {
+		margin-bottom: 16px;
+	}
+	.subtitle {
+		font-size: 16px;
+		line-height: 21px;
+	}
+	.banner {
+		background-size: auto;
+		padding: 100px 0 20px 20px;
+		background-image: url(../images/banner-bg-mob.png);
+		background-repeat: no-repeat;
+		background-position: bottom 140px left 0;
+	}
+	.callback {
+		max-width: 191px;
+		height: 41px;
+		font-size: 13px;
+		line-height: 13px;
+	}
+	.banner-img {
+		max-width: 290px;
+		top: -40px;
+	}
+	.about {
+		padding: 90px 0 40px;
+		background-position: right -482px top 84px, right -69px top 49px;
+	}
+	.about .title-mob {display: block;}
+	.about .title:not(.title-mob) {display: none;}
+	.benefits .title {padding-bottom: 27px;}
+	.bnf-title {
+		font-size: 21px;
+		line-height: 21px;
+	}
+	.bnf-cnt p br {display: none;}
+	.format .title {
+		padding-bottom: 50px;
+		text-align: left;
+	}
+	.format-item-img {
+		max-width: 143px;
+		min-width: 143px;
+		height: 143px;
+	}
+	.format-item-title {
+		padding-top: 74px;
+		font-size: 18px;
+		line-height: 20px;
+	}
+	.format-item {
+		margin-bottom: 70px;
+		padding: 118px 9px 45px 18px;
+	}
+	.price {background: none;}
+	.price .title span {
+		font-size: 16px;
+		line-height: 16px;
+	}
+	.price .title {margin-bottom: 30px;}
+	.price-head p,
+	.lesson-docs,
+	.lesson-text,
+	.rev-text p,
+	.shares-title,
+	.shares-text,
+	.price-stroke {
+		font-size: 14px;
+		line-height: 21px;
+	}
+	.format-item-text p {
+		font-size: 14px;
+		line-height: 15px;
+	}
+	.format-item-text p:not(:last-child) {margin-bottom: 7px;}
+	.price-list-title {
+		font-size: 21px;
+		line-height: 21px;
+		margin-bottom: 63px;
+	}
+	.price-head {padding: 0;}
+	.lesson-title {
+		font-size: 16px;
+		line-height: 21px;
+	}
+	.lesson-img {display: none;}
+	.features-list-item-last {margin-top: 0;}
+	.features {
+		padding: 0 0 50px;
+	}
+	.teachers .title {
+		margin-bottom: 31px;
+		text-align: left;
+	}
+	.teachers-list {padding-bottom: 0;}
+	.reviews-cnt .title,
+	.rev-title {
+		margin-bottom: 0;
+		text-align: left;
+	}
+	.rev-title {
+		margin-bottom: 15px;
+		font-size: 18px;
+		line-height: 18px;
+	}
+	.rev-text p:not(:last-child) {
+		margin-bottom: 15px;
+	}
+	.reviews-slider .owl-dots {
+		position: absolute;
+		z-index: 1;
+		left: 0;
+		bottom: -51px;
+		justify-content: flex-start;
+		margin: 0;
+	}
+	.reviews-button {margin-top: 20px;}
+	.reviews-button  a {
+		position: relative;
+		z-index: 2;
+	}
+	.reviews {padding-bottom: 40px;}
+	.shares .title {margin-bottom: 30px;}
+	.shares-slider .owl-dots {
+		top: -47px;
+		justify-content: flex-end;
+	}
+	.shares-text {margin-bottom: 20px;}
+	.shares-slider {margin-bottom: 15px;}
+	.gallery-section {background-image: none;}
+	.shares {padding-bottom: 15px;}
+	.gallery-section {padding-top: 15px;}
+	.gallery-section .title {
+		margin-bottom: 15px;
+	}
+	.gallery-section .btn-gradient {    top: calc(100% + 35px);}
+	.contact {
+		padding: 140px 0 10px;
+		background-position: right -400px bottom 0px, left -326px top 190px;
+		/* background: none; */
+		/* background-image: url(../images/contacts-bg-mob.png);
+		background-position: right 0 bottom 0;
+		background-repeat: no-repeat; */
+	}
+	.banner-cnt {
+		position: relative;
+		z-index: 2;
+		max-width: 220px;
+	}
+	.lesson-number {white-space: nowrap;}
+	.bnf-img {
+		max-width: 76px;
+		height: auto;
+	}
+	.price {
+		padding: 0px 0 45px;
+	}
+	.features .title {
+		margin-bottom: 74px;
+	}
+	.teachers {padding-bottom: 58px;}
+	.price-item p br {display: none;}
+	.popup {
+		padding: 56px 15px;
+		margin: 0 20px;
+	}
+	.popup-title {
+		font-size: 24px;
+		line-height: 24px;
+	}
+	.shares {background: none;}
+	.popup-info {height: 555px;}
+	.about-img-pc {display: none;}
+	.about-img-mob {display: block;}
+	.contact .title {
+		margin-bottom: 20px;
+	}
+	.contact-column p:not(:last-child) {
+		margin-bottom: 10px;
+	}
+}
+
+@media(max-width: 744px) {
+	.teachers-list.hidden .teacher:nth-child(n+5) {
+		display: none;
+	}
+}
+@media(max-width: 730px) {
+	.bnf {
+		max-width: 100%;
+		padding-right: 0;
+	}
+	.benefits-list.hidden .bnf:nth-child(n+4) {display: none;}
+	.benefits .btn-gradient {margin: 0 auto;}
+	.price-item {
+		margin-right: 0;
+		width: 100%;
+		max-width: 140px;
+		padding-right: 5px;
+	}
+	.about-cnt-text {    height: 290px;}
+	.benefits .title {text-align: left;}
+	.price .title {
+		margin-bottom: 36px;
+	}
+	.lesson-docs {margin-bottom: 0;}
+	.format-item-img {margin-right: 15px;}
+}
+@media(max-width: 650px) {
+	.gallery-item {
+		max-height: 200px;
+		max-width: calc(100% / 2);
+	}
+	.contact-column {margin-right: 0;}
+	.contact-column br {display: none;}
+}
+@media(max-width: 550px) {
+	.banner-img {
+		max-width: 203px;
+		top: -33px;
+	}
+	.about {
+		padding: 38px 0 26px;
+	}
+	.about .title {margin-bottom: 26px;}
+	.about-img {
+		max-width: 284px;
+	}
+	.gallery-item {
+		max-height: 135px;
+	}
+	.contact-column-1 {order: 1;}
+	.contact-column-3 {order: 2;}
+	.contact-column-2 {order: 3;}
+	.contact-column-4 {order: 4;}
+}
+@media(max-width: 509px) {
+	.teachers-list.hidden .teacher:nth-child(n+4) {
+		display: none;
+	}
+
+	.timer-element,
+	.timer-element canvas {
+		width: 60px !important;
+		height: 60px !important;
+	}
+
+	.timer-element > span {
+		font-size: 10px !important;
+	}
+	.timer-separator {
+		display: block !important;
+		width: 15px !important;
+		padding: 0 !important;
+	}
+	.timer-separator,
+	.shares-timer > div {height: 60px !important;}
+	.shares-timer > div {max-width: 100%;}
+
+	.shares-timer > div {min-width: 0 !important;}
+	 
+}
+@media(max-width: 359px) {
+	.format-item-title {
+		padding-top: 53px;
+		font-size: 16px;
+		line-height: 21px;
+	}
+	.banner-img {
+		max-width: 185px;
+		top: 0px;
+	}
+}
+@media(max-height: 400px) {
+	.popup-layout {
+		align-items: flex-start;
+		padding: 20px;
+		overflow-y: scroll;
+	}
+
+	.popup-layout::-webkit-scrollbar {width: 0px;}
+ 
+	.popup-layout::-webkit-scrollbar-track {box-shadow: inset 0 0 0px #ffffff;}
+
+	.popup-layout::-webkit-scrollbar-thumb {background-color: transparent;}
 }

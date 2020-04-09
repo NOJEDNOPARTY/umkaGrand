@@ -36,19 +36,36 @@
     <header>
         <div class="wrapper">
             <a href="#" class="logo"><img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="./images/logo.jpg" alt="logo"></a>
-            <nav>
-                <a href="#about" class="anchor">Про нас</a>
-                <a href="#benefits" class="anchor">Ключові переваги</a>
-                <a href="#format" class="anchor">Формати навчання</a>
-                <a href="#features" class="anchor">Особливості вступу</a>
-                <a href="#reviews" class="anchor">Відгуки</a>
-                <a href="#shares" class="anchor">Акції</a>
-                <a href="#contact" class="anchor">Контакти</a>
-            </nav>
+            <div class="menu-wrap">
+                <div class="menu-top">
+                    <a href="#" class="logo"><img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="./images/logo.jpg" alt="logo"></a>
+                    <div class="lang-trigger lang-trigger-mob">
+                        <a href="" class="lang-trigger-link">РУС</a>
+                        <span class="lang-trigger-slash">/</span>
+                        <span class="lang-trigger-active">УКР</span>
+                    </div>
+                    <div class="menu-close-trigger">
+                        <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="./images/close-btn.svg" alt="close">
+                    </div>
+                </div>
+                <nav>
+                    <a href="#about" class="anchor">Про нас</a>
+                    <a href="#benefits" class="anchor">Ключові переваги</a>
+                    <a href="#format" class="anchor">Формати навчання</a>
+                    <a href="#features" class="anchor">Особливості вступу</a>
+                    <a href="#reviews" class="anchor">Відгуки</a>
+                    <a href="#shares" class="anchor">Акції</a>
+                    <a href="#contact" class="anchor">Контакти</a>
+                </nav>
+
+            </div>
             <div class="lang-trigger">
                 <a href="" class="lang-trigger-link">РУС</a>
                 <span class="lang-trigger-slash">/</span>
                 <span class="lang-trigger-active">УКР</span>
+            </div>
+            <div class="menu-trigger">
+                <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="./images/menu-trigger.svg" alt="menu-trigger">
             </div>
         </div>
     </header>
@@ -65,8 +82,10 @@
         </div>
         <div id="about" class="about">
             <div class="wrapper">
+                <div class="title title-red title-mob">Про нас</div>
                 <div class="about-img">
-                    <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="./images/about-img.png" alt="about-img">
+                    <img class="b-lazy about-img-pc" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="./images/about-img.png" alt="about-img">
+                    <img class="b-lazy about-img-mob" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="./images/about-img-mob.png" alt="about-img">
                 </div>
                 <div class="about-cnt">
                     <div class="title title-red">Про нас</div>
@@ -89,10 +108,10 @@
                 </div>
             </div>
         </div>
-        <div id="benefits" class="benefits">
+        <div id="benefits" class="benefits more-cnt-wrap">
             <div class="wrapper">
                 <div class="title title-blue">Ключові переваги</div>
-                <div class="benefits-list">
+                <div class="benefits-list more-cnt hidden">
                     <div class="bnf">
                         <div class="bnf-img"><img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="./images/bnf-1.png" alt="bnf"></div>
                         <div class="bnf-cnt">
@@ -445,6 +464,11 @@
                         </div>
                     </div>
                 </div>
+                <a href="#" class="btn-gradient btn-gradient-green hidden more-trigger" data-open="Подивитися менше" data-hidden="Подивитися більше">
+                    <span class="btn-gradient-layout">
+                        <span class="more-trigger-cnt">Подивитися більше</span>
+                    </span>
+                </a>
             </div>
         </div>
         <div id="format" class="format">
